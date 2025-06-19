@@ -1,0 +1,13 @@
+prefix=D:/Project/LLAMA_char/llamaenv/Library
+exec_prefix=D:/Project/LLAMA_char/llamaenv/Library
+libdir=D:/Project/LLAMA_char/llamaenv/Library/lib
+sharedlibdir=D:/Project/LLAMA_char/llamaenv/Library/lib
+includedir=D:/Project/LLAMA_char/llamaenv/Library/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.2.13
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}
