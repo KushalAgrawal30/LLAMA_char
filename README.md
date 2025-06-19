@@ -37,3 +37,11 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 
 # Install required packages
 pip install -r requirements.txt
+```
+
+## ▶️ How to run
+After setting up the API key:
+
+```bash
+streamlit run app.py
+```
