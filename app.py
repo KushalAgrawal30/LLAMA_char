@@ -2,7 +2,6 @@ import os
 import streamlit as st
 from mistralai import Mistral
 
-
 api_key = st.secrets["MISTRAL_API_KEY"] 
 model = "mistral-large-latest"
 
