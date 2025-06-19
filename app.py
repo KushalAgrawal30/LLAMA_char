@@ -1,19 +1,14 @@
 import os
 import streamlit as st
 from mistralai import Mistral
-# from dotenv import load_dotenv
 
-# load_dotenv()
 
-# --- Mistral Setup ---
-api_key = st.secrets["MISTRAL_API_KEY"] # Best practice: store your key in .streamlit/secrets.toml
+api_key = st.secrets["MISTRAL_API_KEY"] 
 model = "mistral-large-latest"
 
-# Initialize Mistral Client
 client = Mistral(api_key=api_key)
 print(api_key)
 
-# --- Character Generation Function ---
 def generate_character_description(name, role, traits, setting, age, specific_details):
     prompt = f"""
 You are a creative assistant helping generate fictional characters for novels or games.
@@ -36,7 +31,6 @@ Provide a description that highlights their appearance, behavior, backstory, and
     
     return response.choices[0].message.content.strip()
 
-# --- Streamlit UI ---
 st.title("🧬 AI-Powered Character Description Generator")
 st.markdown("Generate unique, creative character descriptions using Mistral AI.")
 
